@@ -1,0 +1,11 @@
+{
+  "name": "micro-dashboard",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix shell\" \"npm run dev --prefix apps/analytics\" \"npm run dev --prefix apps/users\" \"npm run dev --prefix apps/settings\"",
+    "install:all": "npm i --prefix shell && npm i --prefix apps/analytics && npm i --prefix apps/users && npm i --prefix apps/settings"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
