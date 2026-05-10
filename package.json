@@ -1,11 +1,15 @@
 {
   "name": "micro-dashboard",
   "private": true,
-  "scripts": {
-    "dev": "concurrently \"npm run dev --prefix shell\" \"npm run dev --prefix apps/analytics\" \"npm run dev --prefix apps/users\" \"npm run dev --prefix apps/settings\"",
-    "install:all": "npm i --prefix shell && npm i --prefix apps/analytics && npm i --prefix apps/users && npm i --prefix apps/settings"
-  },
+ "scripts": {
+  "dev": "concurrently \"npm run dev --prefix shell\" \"npm run dev --prefix apps/analytics\" \"npm run dev --prefix apps/users\" \"npm run dev --prefix apps/settings\"",
+  
+  "preview:all": "concurrently \"npm run preview --prefix apps/analytics\" \"npm run preview --prefix apps/users\" \"npm run preview --prefix apps/settings\" \"npm run preview --prefix shell\"",
+  
+  "install:all": "npm i --prefix shell && npm i --prefix apps/analytics && npm i --prefix apps/users && npm i --prefix apps/settings"
+},
   "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.4.1",
     "concurrently": "^8.2.0"
   }
 }
