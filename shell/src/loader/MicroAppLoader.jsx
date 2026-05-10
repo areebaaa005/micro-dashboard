@@ -4,21 +4,21 @@ import { useState, useEffect } from "react";
 const APP_REGISTRY = {
   analytics: {
     label: "Analytics",
-    url: "http://localhost:3001",
+    url: "https://micro-dashboard-beryl.vercel.app",
     port: 3001,
     color: "#dbeafe",
     badge: "ANALYTICS MODULE v2.1",
   },
   users: {
     label: "Users",
-    url: "http://localhost:3002",
+    url: "https://micro-dashboard-users.vercel.app",
     port: 3002,
     color: "#fef3c7",
     badge: "USERS MODULE v1.4",
   },
   settings: {
     label: "Settings",
-    url: "http://localhost:3003",
+    url: "https://micro-dashboard-settings.vercel.app",
     port: 3003,
     color: "#f3e8ff",
     badge: "SETTINGS MODULE v1.0",
