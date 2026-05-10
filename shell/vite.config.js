@@ -7,12 +7,12 @@ export default defineConfig({
     react(),
     federation({
       name: "shell",
-      remotes: {
-        // Development ke liye @remote-entry-file use hota hai
-        analytics: "http://localhost:3001/assets/remoteEntry.js",
-        users: "http://localhost:3002/assets/remoteEntry.js",
-        settings: "http://localhost:3003/assets/remoteEntry.js",
-      },
+      // shell/vite.config.js
+remotes: {
+  analytics: 'https://micro-dashboard-beryl.vercel.app/assets/remoteEntry.js',
+  users: 'https://micro-dashboard-users.vercel.app/assets/remoteEntry.js',
+  settings: 'https://micro-dashboard-settings.vercel.app/assets/remoteEntry.js',
+},
       shared: ["react", "react-dom"],
     }),
   ],
